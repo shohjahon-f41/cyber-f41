@@ -43,17 +43,17 @@ export default function App() {
 
             <SwiperSlide>
               <div className="products-info__small-img">
-                <img src={ProDetIphone3} alt="thumb-3" />
+                <img src={ProDetIphoneBig2} alt="thumb-3" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="products-info__small-img">
-                <img src={ProDetIphone4} alt="thumb-4" />
+                <img src={ProDetIphoneBig3} alt="thumb-4" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="products-info__small-img">
-                <img src={ProDetIphone5} alt="thumb-5" />
+                <img src={ProDetIphoneBig4} alt="thumb-5" />
               </div>
             </SwiperSlide>
           </Swiper>

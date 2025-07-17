@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   //   height: 444px;
+  margin: 0;
 }
 .swiper-slide {
   display: flex !important;
@@ -52,7 +53,7 @@ img {
 /* Правая основная карусель */
 .mySwiper2 {
   width: 350px;
-  height: 500px;
+  height: 500px;    margin: 0;
 }
 
 .mySwiper img {
