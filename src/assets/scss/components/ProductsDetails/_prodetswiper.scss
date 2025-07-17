@@ -1,0 +1,54 @@
+.swiper-layout {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Левая вертикальная карусель миниатюр */
+.mySwiper {
+  width: 70px;
+  height: 444px;
+}.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+
+.mySwiper .swiper-slide {
+  height: 25%;
+  width: 100%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #999;
+}
+img {
+  image-rendering: -webkit-optimize-contrast; /* Safari / Chrome */
+  image-rendering: crisp-edges; /* Firefox */
+  image-rendering: pixelated;
+}
+
+/* Правая основная карусель */
+.mySwiper2 {
+  width: 350px;
+  height: 500px
+}
+
+.mySwiper img {
+  width: 100%;
+  height: 100%;
+background-repeat: no-repeat;
+  object-fit: contain;
+}
+.mySwiper2 img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* можно убрать — уже не нужен */
+  image-rendering: auto; /* или 'crisp-edges' / 'high-quality' */
+}
