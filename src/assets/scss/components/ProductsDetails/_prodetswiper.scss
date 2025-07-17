@@ -7,13 +7,30 @@
 
 /* Левая вертикальная карусель миниатюр */
 .mySwiper {
-  width: 70px;
-  height: 444px;
-}.swiper-slide {
+  width: 3%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  //   height: 444px;
+}
+.swiper-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
 }
 
+.mySwiper .swiper-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
+  height: auto !important; /* чтобы не обрезались */
+}
+
+.mySwiper .swiper-slide {
+  height: auto !important; /* высота определяется содержимым */
+}
 
 .mySwiper .swiper-slide {
   height: 25%;
@@ -25,7 +42,6 @@
 
 .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
-  border: 2px solid #999;
 }
 img {
   image-rendering: -webkit-optimize-contrast; /* Safari / Chrome */
@@ -36,13 +52,13 @@ img {
 /* Правая основная карусель */
 .mySwiper2 {
   width: 350px;
-  height: 500px
+  height: 500px;
 }
 
 .mySwiper img {
   width: 100%;
   height: 100%;
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
   object-fit: contain;
 }
 .mySwiper2 img {

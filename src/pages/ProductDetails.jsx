@@ -11,14 +11,17 @@ import {
   ProDetIphone3,
   ProDetIphone4,
   ProDetIphone5,
+  ProDetIphoneBig2,
+  ProDetIphoneBig3,
+  ProDetIphoneBig4,
 } from "../components/ProductDetails/index.js";
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <section className="product-details">
-      <div className="product-info">
+    <section className="products-details">
+      <div className="products-info">
         <div className="products-info__details swiper-layout">
           {/* Миниатюры слева */}
           <Swiper
@@ -33,17 +36,25 @@ export default function App() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src={ProDetIphone} alt="thumb-1" />
+              <div className="products-info__small-img">
+                <img src={ProDetIphone} alt="thumb-1" />
+              </div>
             </SwiperSlide>
-           
+
             <SwiperSlide>
-              <img src={ProDetIphone3} alt="thumb-3" />
+              <div className="products-info__small-img">
+                <img src={ProDetIphone3} alt="thumb-3" />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={ProDetIphone4} alt="thumb-4" />
+              <div className="products-info__small-img">
+                <img src={ProDetIphone4} alt="thumb-4" />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={ProDetIphone5} alt="thumb-5" />
+              <div className="products-info__small-img">
+                <img src={ProDetIphone5} alt="thumb-5" />
+              </div>
             </SwiperSlide>
           </Swiper>
 
@@ -64,15 +75,15 @@ export default function App() {
             <SwiperSlide>
               <img src={ProDetIphone} alt="nature-1" />
             </SwiperSlide>
-           
+
             <SwiperSlide>
-              <img src={ProDetIphone2} alt="nature-3" />
+              <img src={ProDetIphoneBig2} alt="nature-3" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={ProDetIphone4} alt="nature-4" />
+              <img src={ProDetIphoneBig3} alt="nature-4" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={ProDetIphone5} alt="nature-5" />
+              <img src={ProDetIphoneBig4} alt="nature-5" />
             </SwiperSlide>
           </Swiper>
         </div>

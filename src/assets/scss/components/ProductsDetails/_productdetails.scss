@@ -1,4 +1,4 @@
-.product-info {
+.products-info {
   &__photos {
     display: flex;
     flex-direction: column;
@@ -16,5 +16,11 @@
     img {
       object-fit: cover;
     }
+  }
+  &__small-img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
