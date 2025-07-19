@@ -11,20 +11,20 @@ function CartStepTwo() {
       <div className="container">
         <div className="step-two-wrap">
           <div className="step-two-top">
-            <div className="step-two-steps media">
+            <Link to="/cart/first-step" className="step-two-steps media">
               <AdressIconDefault />
               <div className="step-two-steps-text ">
                 <p className="step-two-steps-text-subtitle default">Step 1</p>
                 <h1 className="step-two-steps-text-title default">Address</h1>
               </div>
-            </div>
+            </Link>
 
             <div className="step-two-steps">
               <DeliveryIcon />
-              <div className="step-two-steps-text">
+              <Link to="/cart/second-step" className="step-two-steps-text">
                 <p className="step-two-steps-text-subtitle">Step 2</p>
                 <h1 className="step-two-steps-text-title">Shipping</h1>
-              </div>
+              </Link>
             </div>
 
             <div className="step-two-steps">
