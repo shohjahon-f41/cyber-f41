@@ -15,6 +15,7 @@ import {
   ProDetIphoneBig2,
   ProDetIphoneBig3,
   ProDetIphoneBig4,
+  RelatedIphone14,
 } from "../components/ProductDetails/index.js";
 
 export default function App() {
@@ -203,7 +204,170 @@ export default function App() {
                 had ProMotion, caused real admiration for many.
               </p>
             </div>
-            <div className="details__product-wrap"></div>
+            <div className="details__product-main">
+              <div className="details__product-wrap">
+                <p className="details__product-title">Screen</p>
+                <div className="details__product-item">
+                  <p className="details__product-spec">Screen diagonal</p>
+                  <p className="details__product-spec">6.7"</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">The screen resolution</p>
+                  <p className="details__product-spec">2796x1290</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">
+                    The screen refresh rate
+                  </p>
+                  <p className="details__product-spec">120Hz</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">The pixel density</p>
+                  <p className="details__product-spec">460 ppi</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">Screen type</p>
+                  <p className="details__product-spec">OLED</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">Additionally</p>
+                  <div className="details__product-spec">
+                    <div className="details__product-spec-wrap">
+                      <div className="details__product-spec-item">
+                        <p className="details__product-spec-text">
+                          Dynamic Island
+                        </p>
+                        <p className="details__product-spec-text">
+                          Always-On display
+                        </p>
+                        <p className="details__product-spec-text">
+                          HDR display
+                        </p>
+                        <p className="details__product-spec-text">True Tone</p>
+                        <p className="details__product-spec-text">
+                          Wide color (P3)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="details__product-wrap">
+                <p className="details__product-title">CPU</p>
+                <div className="details__product-item">
+                  <p className="details__product-spec">CPU</p>
+                  <p className="details__product-spec">A16 Bionic</p>
+                </div>
+                <div className="details__product-item">
+                  <p className="details__product-spec">Number of cores</p>
+                  <p className="details__product-spec">6</p>
+                </div>
+              </div>
+            </div>
+            <div className="details__product-buttons">
+              <button className="details__product-more">View More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="reviews">
+        <div className="container">
+          <div className="reviews-wrapper">
+            <p className="reviews__title">Reviews</p>
+            <div className="reviews__stars-wrap">
+              <div className="reviews__stars">
+                <p className="reviews__stars-rate">4.8</p>
+                <p className="reviews__stars-rate-p">of 125 reviews</p>
+              </div>
+              <div className="reviews__stars-info">
+                <div className="reviews__level">
+                  <div className="reviews__level-item">
+                    <p className="reviews-level-text">Excellent</p>
+                    <p className="reviews-level-number">100</p>
+                  </div>
+                  <div className="reviews__level-item">
+                    <p className="reviews-level-text">Excellent</p>
+                    <p className="reviews-level-number">100</p>
+                  </div>
+                  <div className="reviews__level-item">
+                    <p className="reviews-level-text">Excellent</p>
+                    <p className="reviews-level-number">100</p>
+                  </div>
+                  <div className="reviews__level-item">
+                    <p className="reviews-level-text">Excellent</p>
+                    <p className="reviews-level-number">100</p>
+                  </div>
+                  <div className="reviews__level-item">
+                    <p className="reviews-level-text">Excellent</p>
+                    <p className="reviews-level-number">100</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input
+              placeholder="Leave Comment"
+              type="text"
+              className="reviews__comment"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="related">
+        <div className="container">
+          <p className="related__title">Related Products</p>
+          <div className="related__products">
+            <div className="related__products-item">
+              <img src={RelatedIphone14} alt="a" />
+              <div className="related__products-content">
+                <div className="related__products-texts">
+                  <p className="related__products-title">
+                    Apple iPhone 14 Pro 512GB Gold (MQ233)
+                  </p>
+                  <p className="related__products-price">$1437</p>
+                </div>
+                <button className="related__products-buy">Buy Now</button>
+              </div>
+            </div>
+            <div className="related__products-item">
+              <img src={RelatedIphone14} alt="a" />
+
+              <div className="related__products-content">
+                <div className="related__products-texts">
+                  <p className="related__products-title">
+                    Apple iPhone 14 Pro 512GB Gold (MQ233)
+                  </p>
+                  <p className="related__products-price">$1437</p>
+                </div>
+                <button className="related__products-buy">Buy Now</button>
+              </div>
+            </div>
+            <div className="related__products-item">
+              {/* <img src="" alt="" /> */}
+              <img src={RelatedIphone14} alt="a" />
+
+              <div className="related__products-content">
+                <div className="related__products-texts">
+                  <p className="related__products-title">
+                    Apple iPhone 14 Pro 512GB Gold (MQ233)
+                  </p>
+                  <p className="related__products-price">$1437</p>
+                </div>
+                <button className="related__products-buy">Buy Now</button>
+              </div>
+            </div>
+            <div className="related__products-item">
+              <img src={RelatedIphone14} alt="a" />
+
+              <div className="related__products-content">
+                <div className="related__products-texts">
+                  <p className="related__products-title">
+                    Apple iPhone 14 Pro 512GB Gold (MQ233)
+                  </p>
+                  <p className="related__products-price">$1437</p>
+                </div>
+                <button className="related__products-buy">Buy Now</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

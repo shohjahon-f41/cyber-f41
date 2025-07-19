@@ -16,3 +16,6 @@ export { default as ProDetIphoneBig3 }
 from "./pro-det-iphonebig3.png";
 export { default as ProDetIphoneBig4 }
 from "./pro-det-iphonebig4.png";
+
+export { default as RelatedIphone14 }
+from "./related-iphone14.png"
