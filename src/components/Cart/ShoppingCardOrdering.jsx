@@ -7,7 +7,7 @@ function ShoppingCardOrdering() {
             <h1 className='shopping-card-ordering-title'>Order Summary</h1>
             <div className='shopping-card-discount'>
                 <label htmlFor="">Discount code / Promo code
-                    <input type="number" placeholder='Code' />
+                    <input type="text" placeholder='Code' />
                 </label>
             </div>
 
