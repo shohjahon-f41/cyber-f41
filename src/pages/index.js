@@ -4,4 +4,8 @@ import ProductsItem from "./ProductsItem";
 import Cart from "./Cart";
 import Favourite from "./Favourite";
 import ChartHeader from "./ChartHeader";
-export { Home, Products, ProductsItem, Cart, Favourite, ChartHeader }
+import ProductDetails from "./ProductDetails";
+import CartStepOne from "./CartStepOne";
+import CartStepTwo from "./CartStepTwo";
+
+export { Home, Products, ProductsItem, Cart, Favourite, CartStepOne, CartStepTwo, ProductDetails, ChartHeader }

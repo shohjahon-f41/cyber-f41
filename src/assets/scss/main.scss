@@ -4,9 +4,17 @@
 @import "./global/_normalize.scss";
 
 
-// components
-
+// products
 @import "../scss/components/_header.scss";
 @import "../scss/components/HeaderBottom.scss";
 @import "../scss/components/_products.scss";
 
+// cart
+@import "./components/Cart/_shoppingcard.scss";
+@import "./components/Cart/_cartstepone.scss";
+@import "./components/Cart/_cartsteptwo.scss";
+@import "./components/Cart/_cartstepthree.scss"
+  
+// product details
+@import "./components/ProductsDetails/prodetswiper";
+@import "./components/ProductsDetails/productdetails";
