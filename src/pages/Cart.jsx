@@ -1,8 +1,6 @@
 import React from 'react'
 import { ShoppingCardOrdering, ShoppingCardProducts } from '../components/Cart'
 
-
-function Cart() {
   return (
     <>
       <div className="shopping-card">
@@ -15,6 +13,5 @@ function Cart() {
       </div>
     </>
   )
-}
 
 export default Cart
