@@ -12,13 +12,13 @@ function CartStepOne() {
             <div className="container">
                 <div className="step-one-wrap">
                     <div className="step-one-top">
-                        <div className="step-one-steps">
+                        <Link to="/cart/first-step" className="step-one-steps">
                             <AdressIcon />
                             <div className="step-one-steps-text">
                                 <p className='step-one-steps-text-subtitle'>Step 1</p>
                                 <h1 className='step-one-steps-text-title'>Address</h1>
                             </div>
-                        </div>
+                        </Link>
 
                         <div className="step-one-steps">
                             <DeliveryIcon />

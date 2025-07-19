@@ -112,6 +112,7 @@ export const CardsItem = [
         price: "$1399",
 
     }
+
 ]
 
 export const Products = [
@@ -191,4 +192,3 @@ export const StepThreeProducts = [
     price: "$1399",
   },
 ];
-

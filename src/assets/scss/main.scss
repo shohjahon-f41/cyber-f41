@@ -4,10 +4,14 @@
 @import "./global/_normalize.scss";
 
 
-// products
-@import "../scss/components/_header.scss";
-@import "../scss/components/HeaderBottom.scss";
-@import "../scss/components/_products.scss";
+
+// components
+
+@import "../scss/header/header.scss";
+@import "../scss/components/products/products";
+@import "../scss/components/products/HeaderBottom.scss";
+
+
 
 // cart
 @import "./components/Cart/_shoppingcard.scss";
@@ -18,3 +22,9 @@
 // product details
 @import "./components/ProductsDetails/prodetswiper";
 @import "./components/ProductsDetails/productdetails";
+
+
+// footer
+
+@import "./components/Footer/_footer.scss";
+

@@ -4,6 +4,7 @@ import DeliveryIconDefault from "../assets/icons/DeliveryIconDefault";
 import PaymentIcon from "../assets/icons/PaymentIcon.jsx";
 import StepThreeSummary from "../components/Cart/StepThreeSummary.jsx";
 import StepThreePayment from "../components/Cart/StepThreePayment.jsx";
+import { Link } from "react-router-dom";
 
 function CartStepThree() {
   return (
@@ -19,7 +20,7 @@ function CartStepThree() {
               </div>
             </div>
 
-            <div className="step-three-steps">
+            <Link to="/cart/second-step" className="step-three-steps">
               <DeliveryIconDefault />
               <div className="step-three-steps-text">
                 <p className="step-three-steps-text-subtitle default">Step 2</p>
@@ -27,15 +28,15 @@ function CartStepThree() {
                   Shipping
                 </h1>
               </div>
-            </div>
+            </Link>
 
-            <div className="step-three-steps">
+            <Link to="/cart/third-step" className="step-three-steps">
               <PaymentIcon />
               <div className="step-three-steps-text">
                 <p className="step-three-steps-text-subtitle">Step 3</p>
                 <h1 className="step-three-steps-text-title">Payment</h1>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="step-three-bottom">
