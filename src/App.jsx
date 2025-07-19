@@ -1,4 +1,5 @@
 import { Footer, Header, Main } from "./layout"
+import { Cart } from "./pages"
 
 function App() {
 
