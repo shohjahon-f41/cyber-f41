@@ -1,0 +1,235 @@
+.step-three {
+  margin-top: 72px;
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-steps {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-steps-text-subtitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    letter-spacing: 0.03em;
+  }
+
+  &-steps-text-title {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 126%;
+    letter-spacing: 0.03em;
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 96px;
+    margin-top: 96px;
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &-summary {
+    width: 50%;
+    padding: 32px 24px;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    margin-top: 96px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1100px) {
+      display: none;
+    }
+  }
+
+  &-payment {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 96px;
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+      margin: 0 100px;
+    }
+  }
+
+  &-payment-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 80%;
+    letter-spacing: 0.03em;
+  }
+
+  &-payment-card-types {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    margin-top: 32px;
+  }
+
+  &-payment-card-items {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    letter-spacing: 0.03em;
+    color: #717171;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &-card-img {
+    margin: 48px 0;
+  }
+
+  &-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-card-infos {
+    width: 100%;
+    border: 0.5px solid #cecece;
+    border-radius: 7px;
+    padding: 16px 16px;
+  }
+
+  &-card-additions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &-correction-check {
+    margin-top: 54px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-top: 50px;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    border: 1px solid $black;
+    border-radius: 6px;
+    padding: 24px 86px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    background-color: $black;
+    color: $white;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  &-products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  &-products-item {
+    padding: 16px;
+    background-color: #f6f6f6;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-products-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &-product-price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+  }
+
+  &-address,
+  &-delivery {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-address-title,
+  &-delivery-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #545454;
+  }
+
+  &-address-subtitle,
+  &-delivery-subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &-delivery {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .media {
+    display: none;
+  }
+}
