@@ -1,8 +1,16 @@
 import React from 'react'
 
+
+
 function Header() {
   return (
-    <header className='header'>Header</header>
+    <>
+   <header className='header'>
+      <div className="container">
+      
+      </div>
+    </header>
+    </>
   )
 }
 

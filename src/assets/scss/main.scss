@@ -3,3 +3,10 @@
 @import "./global/_variables.scss";
 @import "./global/_normalize.scss";
 
+
+// components
+
+@import "../scss/header/header.scss";
+@import "../scss/components/products/products";
+@import "../scss/components/products/HeaderBottom.scss";
+

@@ -1,0 +1,50 @@
+.header {
+  border-bottom: 1px solid #A4A4A4;
+  &__wrap {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+  }
+  &__input-item {
+    padding: 19px 0;
+    height: 56px;
+    width: 324px;
+    color: $gray;
+    outline: none;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 0 8px 8px 0;
+  }
+  &__input__label {
+    width: 56px;
+    height: 56px;
+
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+  }
+  &__navbar {
+    display: flex;
+    gap: 52px;
+  }
+  &__navbar-item {
+    font-weight: 500;
+    font-size: 16px;
+    color: $black;
+    transition: all 0.3s ease;
+    &:hover{
+      opacity: 0.3;
+    }
+  }
+  &__buttons{
+    display: flex;
+    gap: 24px;
+  }
+}
