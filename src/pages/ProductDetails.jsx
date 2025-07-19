@@ -297,6 +297,7 @@ export default function App() {
             <div className="details__product-buttons">
               <button className="details__product-more">
                 View More 
+                View More 
                 <ViewMoreSvg className="viewmoresvg" />
               </button>
             </div>
