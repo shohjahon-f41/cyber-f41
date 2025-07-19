@@ -7,61 +7,61 @@ import ArrowRight from "../assets/icons/ArrowRight"
 import "../assets/scss/main.scss"
 
 function Products() {
-  
-     let ButtonRef = useRef(null);
+
+  let ButtonRef = useRef(null);
   let ProductsTypes = useRef(null)
   let CardItems = useRef(null)
   let ProductsTypesItems = useRef(null)
   function handleClick() {
-     ButtonRef.current.classList.toggle("active");
-  
-if(ButtonRef.current.classList.contains("active")){
+    ButtonRef.current.classList.toggle("active");
+
+    if (ButtonRef.current.classList.contains("active")) {
       ProductsTypes.current.classList.add("active")
     }
-    else(
+    else (
       ProductsTypes.current.classList.remove("active")
     )
     ProductsTypesItems.current.classList.add("active")
-  
+
     console.log(ButtonRef);
-     }
- 
-     
+  }
+
+
   return (
     <section className="products">
       <div className="container">
         <div className="home__wrap">
           <div className="home__wrap__item">
             <p className="home__wrap__sub">Home</p>
-          <div className="home__wrap__arrow">
-            <ArrowRight/>
-          </div>
+            <div className="home__wrap__arrow">
+              <ArrowRight />
+            </div>
           </div>
           <div className="home__wrap__item">
             <p className="home__wrap__sub">Catalog</p>
-          <div className="home__wrap__arrow">
-            <ArrowRight/>
-          </div>
+            <div className="home__wrap__arrow">
+              <ArrowRight />
+            </div>
           </div>
           <div className="home__wrap__item">
             <p className="home__wrap__sub">Smartphones</p>
-          <div className="home__wrap__arrow">
-           
-           
-          </div>
+            <div className="home__wrap__arrow">
+
+
+            </div>
           </div>
         </div>
         <div className="products__wrap">
 
           <div className="products__left">
- <div className="products__options">
-            <div className="products__left__heading">
-              <h2 className="products__heading__title">Brand</h2>
-              <button className="products__left__img" ref={ButtonRef} onClick={handleClick}>
-                <ArrowTop />
-              </button>
-            </div>
-           
+            <div className="products__options">
+              <div className="products__left__heading">
+                <h2 className="products__heading__title">Brand</h2>
+                <button className="products__left__img" ref={ButtonRef} onClick={handleClick}>
+                  <ArrowTop />
+                </button>
+              </div>
+
               <div className="products__heading__hidden"  >
                 <div className="products__input">
                   <label htmlFor="products-search" className='products__input__label'><Search /></label>
@@ -135,20 +135,20 @@ if(ButtonRef.current.classList.contains("active")){
             </div>
             <div className="products__right__cards">
               {
-           CardsItem.map(item=>(
-            <div className="products__right__cards__item" key={item.id}>
-                  <div className='products__cards__item__heading__box'>
-                    <div></div>
-                  <button className="products__cards__item__heading__heart"><HeartCards/></button>
+                CardsItem.map(item => (
+                  <div className="products__right__cards__item" key={item.id}>
+                    <div className='products__cards__item__heading__box'>
+                      <div></div>
+                      <button className="products__cards__item__heading__heart"><HeartCards /></button>
+                    </div>
+                    <div className="products__cards__item__img-box">
+                      <img src={item.img} alt="" className="products__cards__item__img" />
+                    </div>
+                    <p className="products__cards__item__desc">{item.desc}</p>
+                    <h2 className="products__cards__item__title">{item.price}</h2>
+                    <button className="products__cards__item__button">Buy Now</button>
                   </div>
-                  <div className="products__cards__item__img-box">
-                    <img src={item.img} alt="" className="products__cards__item__img" />
-                  </div>
-                  <p className="products__cards__item__desc">{item.desc}</p>
-                  <h2 className="products__cards__item__title">{item.price}</h2>
-                  <button className="products__cards__item__button">Buy Now</button>
-              </div>
-           ))   
+                ))
               }
             </div>
           </div>
