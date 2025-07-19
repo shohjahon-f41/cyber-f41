@@ -8,6 +8,7 @@ import LogoFooter from "../assets/icons/LogoFooter.jsx"
 
 function Footer() {
   return (
+
     <footer className='footer'>
       <div className="container">
         <div className="footer-wrap">
@@ -51,6 +52,7 @@ function Footer() {
 
       </div>
     </footer>
+
   )
 }
 

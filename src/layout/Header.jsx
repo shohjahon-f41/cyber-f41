@@ -7,11 +7,14 @@ import Contact from '../assets/scss/svg/Contact'
 import "../assets/scss/main.scss"
 
 
+
+
 function Header() {
   return (
     <>
    <header className='header'>
       <div className="container">
+
       <div className="header__wrap">
         <a href="#" className="header__wrap__logo"><LogoIcon/></a>
         <div className="header__input">
