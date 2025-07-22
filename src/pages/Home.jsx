@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { BrowseCat, Popular, Products, Sale } from '../components';
 
 function Home() {
   return (
-    <div>Home</div>
+    <section className="home">
+      <BrowseCat />
+      <Products />
+      <Popular />
+      <Sale />
+    </section>
   )
 }
 
