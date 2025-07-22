@@ -106,7 +106,7 @@ export default function App() {
             <div className="products-info__right">
               <h1 className="right__title">Apple iPhone 14 Pro Max</h1>
               <div className="right__price">
-                <p className="right-price__text">1399$</p>{" "}
+                <p className="right-price__text">1399$</p>
                 <span className="discount">$1499</span>
               </div>
               <div className="right__select-color">
@@ -122,7 +122,7 @@ export default function App() {
                       borderRadius: "50%",
                       border: "none",
                       transform:
-                        selectedColor === color ? "scale(1.1)" : "scale(1)",
+                        selectedColor === color ? "scale(1.1)" : "scale(1) ",
                       transition: "all 0.2s ease",
                       cursor: "pointer",
                     }}
