@@ -249,9 +249,9 @@
 }
 .viewmoresvg {
   transition: all 0.5s ease;
-color: $black;
+  color: $black;
   &:hover {
-     color: $white; 
+    color: $white;
   }
 }
 .reviews {
@@ -268,6 +268,12 @@ color: $black;
     justify-content: space-between;
     gap: 60px;
     margin: 48px 0;
+  }
+  &__progress {
+    border-radius: 16px;
+    width: 600px;
+    height: 5px;
+    background: #ffb547;
   }
   &__stars {
     display: flex;
@@ -305,6 +311,8 @@ color: $black;
   &__level-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 16px;
     width: 100%;
   }
   &__comment {
