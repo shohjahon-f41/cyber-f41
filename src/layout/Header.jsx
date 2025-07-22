@@ -5,6 +5,7 @@ import Heart from '../assets/scss/svg/Heart'
 import Shop from '../assets/scss/svg/Shop'
 import Contact from '../assets/scss/svg/Contact'
 import "../assets/scss/main.scss"
+import { Link } from 'react-router-dom'
 
 
 function Header() {
@@ -19,10 +20,10 @@ function Header() {
         <input type="text" id='search' placeholder='Search' className='header__input-item'/>
         </div>
         <nav className="header__navbar">
-          <a href="#" className="header__navbar-item">Home</a>
-          <a href="#" className="header__navbar-item">About</a>
-          <a href="#" className="header__navbar-item">Contact Us </a>
-          <a href="#" className="header__navbar-item">Blog</a>
+          <Link to="/" className="header__navbar-item">Home</Link>
+          <Link href="#" className="header__navbar-item">About</Link>
+          <Link href="#" className="header__navbar-item">Contact Us </Link>
+          <Link href="#" className="header__navbar-item">Blog</Link>
         </nav>
         <div className="header__buttons">
           <a href="#" className="header__buttons__item"><Heart/></a>
