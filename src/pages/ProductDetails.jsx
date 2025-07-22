@@ -26,12 +26,12 @@ import { BattarySvg } from "../components/ProductDetails/BattarySvg.jsx";
 import { StockSvg } from "../components/ProductDetails/StockSvg.jsx";
 import { GuarantSvg } from "../components/ProductDetails/GuarantSvg.jsx";
 import { ViewMoreSvg } from "../components/ProductDetails/ViewMoreSvg.jsx";
-import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
+// import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [selectedColor, setSelectedColor] = useState("black");
-  const colors = ["#000", "#781dbc", "#e10000", "#e1b000", "#e8e8e8"];
+  const colors = ["#000000", "#781dbc", "#e10000", "#e1b000", "#e8e8e8"];
 
   return (
     <>
@@ -43,7 +43,7 @@ export default function App() {
               <Swiper
                 onSwiper={setThumbsSwiper}
                 loop={true}
-                direction={"vertical"}
+                direction="vertical"
                 spaceBetween={10}
                 slidesPerView={4}
                 freeMode={true}
