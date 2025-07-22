@@ -315,6 +315,22 @@
     gap: 16px;
     width: 100%;
   }
+  &-level-text {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 89%;
+    color: $black;
+  }
+  &-level-number {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: right;
+    color: $black;
+    opacity: 0.4;
+  }
   &__comment {
     border: 0.5px solid #cecece;
     border-radius: 7px;

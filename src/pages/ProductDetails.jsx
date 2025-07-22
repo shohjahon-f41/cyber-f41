@@ -26,6 +26,7 @@ import { BattarySvg } from "../components/ProductDetails/BattarySvg.jsx";
 import { StockSvg } from "../components/ProductDetails/StockSvg.jsx";
 import { GuarantSvg } from "../components/ProductDetails/GuarantSvg.jsx";
 import { ViewMoreSvg } from "../components/ProductDetails/ViewMoreSvg.jsx";
+import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
