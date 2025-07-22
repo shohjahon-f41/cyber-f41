@@ -43,7 +43,7 @@ export default function App() {
               <Swiper
                 onSwiper={setThumbsSwiper}
                 loop={true}
-                direction="vertical"
+                direction={"vertical"}
                 spaceBetween={10}
                 slidesPerView={4}
                 freeMode={true}
@@ -345,6 +345,7 @@ export default function App() {
             </div>
             <input
               placeholder="Leave Comment"
+              id="lea"
               type="text"
               className="reviews__comment"
             />
