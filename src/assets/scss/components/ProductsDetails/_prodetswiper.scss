@@ -5,7 +5,12 @@
     justify-content: center;
     user-select: none;
 }
-
+@media screen and (max-width: 768px) {
+    .swiper-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 /* Левая вертикальная карусель миниатюр */
 
@@ -79,4 +84,13 @@ img {
     max-width: 100%;
     object-fit: contain;
     image-rendering: auto;
+}
+
+@media screen and (max-width: 768px) {
+.mySwiper2 img {
+    width: 260px;
+    height: 320px;
+    max-width: 100%;
+    object-fit: contain;
+  }
 }

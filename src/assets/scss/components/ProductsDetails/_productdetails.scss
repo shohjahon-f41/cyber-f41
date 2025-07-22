@@ -1,3 +1,4 @@
+
 .products-info {
   display: flex;
   align-items: center;
@@ -25,6 +26,15 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .products-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
 .products-details {
   padding: 100px 0;
 }
@@ -67,6 +77,12 @@
   margin: 24px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .right-spec {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .spec-item {
   display: flex;
   align-items: center;
@@ -105,6 +121,12 @@
   margin: 32px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .right-buttons {
+    flex-direction: column;
+  }
+}
+
 .right-button {
   width: 50%;
   border: 1px solid $black;
@@ -124,6 +146,12 @@
   &:hover {
     color: $white;
     background-color: $black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right-button {
+    width: 100%;
   }
 }
 
@@ -153,6 +181,18 @@
   line-height: 171%;
   color: $black;
   gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .info-product-item {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info-products-text {
+    text-align: center;
+  }
 }
 
 .gray {
@@ -245,6 +285,32 @@
       color: $white;
       background-color: $black;
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .details {
+    padding: 0 !important;
+  }
+
+  .reviews {
+    padding: 0 !important;
+  }
+
+  .reviews__progress {
+    display: none;
+  }
+  .reviews__progress {
+    flex: 1;
+    height: 5px;
+    background: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .reviews__progress-fill {
+    height: 100%;
+    background: #ffb547;
+    border-radius: 8px;
   }
 }
 
@@ -348,6 +414,13 @@
 }
 
 // ...
+@media screen and (max-width: 768px) {
+  .related {
+    padding: 0 !important;
+  }
+
+  
+}
 
 .related {
   padding: 80px 160px;
@@ -371,7 +444,9 @@
     background: #f6f6f6;
     border-radius: 9px;
     padding: 24px 16px;
-    // min-width: 200px;  
+    // min-width: 200px;
+    flex: 1 1 calc(50% - 16px); // 2 в ряд
+    max-width: 100%;
   }
   &__products-content {
     display: flex;

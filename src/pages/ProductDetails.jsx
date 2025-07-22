@@ -317,27 +317,38 @@ export default function App() {
                 <div className="reviews__level">
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                    <div className="reviews__progress"></div>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
+
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                    <div className="reviews__progress"></div>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                    <div className="reviews__progress"></div>
+                  <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                    <div className="reviews__progress"></div>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                    <div className="reviews__progress"></div>
+                   <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                 </div>
@@ -345,7 +356,7 @@ export default function App() {
             </div>
             <input
               placeholder="Leave Comment"
-              id="lea"
+              id="leavecomment"
               type="text"
               className="reviews__comment"
             />
