@@ -1,4 +1,5 @@
-import { Cart, Favourite, Home, Products, ProductsItem } from "../pages";
+import { Cart, CartStepOne, CartStepTwo, Favourite, Home, Products, ProductDetails } from "../pages";
+import CartStepThree from "../pages/CartStepThree";
 
 export const routes = [
     {
@@ -9,10 +10,7 @@ export const routes = [
         path: "/products",
         element: <Products />
     },
-    {
-        path: "/products:id",
-        element: <ProductsItem />
-    },
+    { path: "/product-details/:id", element: <ProductDetails /> },
     {
         path: "/cart",
         element: <Cart />
@@ -22,7 +20,20 @@ export const routes = [
         element: <Favourite />
     },
     {
+        path:"/cart/first-step",
+        element: <CartStepOne />
+    },
+    {
+        path:"/cart/second-step",
+        element: <CartStepTwo />
+    },
+    {
+        path:"/cart/third-step",
+        element: <CartStepThree />
+    },
+    {
         path: "*",
         element: <Home />
-    },
+    }
+    
 ]

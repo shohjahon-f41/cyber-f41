@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import {CloseIcon, HeartIcon, KorzinaIcon, LogoIcon, MenuIcon} from "../assets/svg/Home/index";
 
-
 function Header() {
   let MenuBtnRef = useRef(document.querySelector(".header-menu"));
 
