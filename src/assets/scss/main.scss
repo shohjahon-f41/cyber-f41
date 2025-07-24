@@ -9,11 +9,9 @@
 @import "../scss/components/HeaderBottom.scss";
 @import "../scss/components/_products.scss";
 @import "./components/Home/_banner.scss";
-@import "./components/Home/_homeproducts.scss";
 
 // components
 
-@import "../scss/header/header.scss";
 @import "../scss/components/products/products";
 @import "../scss/components/products/HeaderBottom.scss";
 
@@ -22,7 +20,7 @@
 @import "./components/Cart/_cartstepone.scss";
 @import "./components/Cart/_cartsteptwo.scss";
 @import "./components/Cart/_cartstepthree.scss";
-  
+
 // product details
 @import "./components/ProductsDetails/prodetswiper";
 @import "./components/ProductsDetails/productdetails";

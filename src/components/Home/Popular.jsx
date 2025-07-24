@@ -1,8 +1,8 @@
 import React from 'react';
-import PopularProdacts from "/image/popular-img.png";
-import PopularIpad from "/image/popular-ipad.png";
-import PopularSamsung from "/image/popular-samsung.png";
-import PopularMac from "/image/popular-macbook.png";
+import PopularProdacts from "/images/popular-img.png";
+import PopularIpad from "/images/popular-ipad.png";
+import PopularSamsung from "/images/popular-samsung.png";
+import PopularMac from "/images/popular-macbook.png";
 
 function Popular() {
     return (

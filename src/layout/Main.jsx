@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
 import { routes } from '../data/routes'
-import { Cart, ChartHeader } from '../pages'
 
 function Main() {
   return (
