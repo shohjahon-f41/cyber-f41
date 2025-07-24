@@ -17,6 +17,15 @@ import {
   ProDetIphoneBig4,
   RelatedIphone14,
 } from "../components/ProductDetails/index.js";
+import ScreenSizeSvg from "../components/ProductDetails/ScreenSizeSvg.jsx";
+import CpuSvg from "../components/ProductDetails/CpuSvg.jsx";
+import CoreSvg from "../components/ProductDetails/CoreSvg.jsx";
+import MainCameraSvg from "../components/ProductDetails/MainCamera.jsx";
+import FrontCameraSvg from "../components/ProductDetails/FrontCameraSvg.jsx";
+import { BattarySvg } from "../components/ProductDetails/BattarySvg.jsx";
+import { StockSvg } from "../components/ProductDetails/StockSvg.jsx";
+import { GuarantSvg } from "../components/ProductDetails/GuarantSvg.jsx";
+import { ViewMoreSvg } from "../components/ProductDetails/ViewMoreSvg.jsx";
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -121,28 +130,46 @@ export default function App() {
               </div>
               <div className="right-spec">
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">Screen size</p>
-                  <p className="spec-item-subtitle title">6.7"</p>
+                  <ScreenSizeSvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">Screen size</p>
+                    <p className="spec-item-subtitle title">6.7"</p>
+                  </div>
                 </div>
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">CPU</p>
-                  <p className="spec-item-subtitle title">Apple A16 Bionic</p>
+                  <CpuSvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">CPU</p>
+                    <p className="spec-item-subtitle title">Apple A16 Bionic</p>
+                  </div>
                 </div>
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">Number of Cores</p>
-                  <p className="spec-item-subtitle title">6</p>
+                  <CoreSvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">Number of Cores</p>
+                    <p className="spec-item-subtitle title">6</p>
+                  </div>
                 </div>
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">Main camera</p>
-                  <p className="spec-item-subtitle title">48-12 -12 MP</p>
+                  <MainCameraSvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">Main camera</p>
+                    <p className="spec-item-subtitle title">48-12 -12 MP</p>
+                  </div>
                 </div>
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">Front-camera</p>
-                  <p className="spec-item-subtitle title">12 MP</p>
+                  <FrontCameraSvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">Front-camera</p>
+                    <p className="spec-item-subtitle title">12 MP</p>
+                  </div>
                 </div>
                 <div className="spec-item">
-                  <p className="spec-item__subtitle">Battery capacity</p>
-                  <p className="spec-item-subtitle title">4323 mAh</p>
+                  <BattarySvg />
+                  <div className="spec-item-wrap">
+                    <p className="spec-item__subtitle">Battery capacity</p>
+                    <p className="spec-item-subtitle title">4323 mAh</p>
+                  </div>
                 </div>
               </div>
               <p className="right__desc">
@@ -166,7 +193,9 @@ export default function App() {
                   </div>
                 </div>
                 <div className="info-product-item">
-                  <div className="info-product-icon"></div>
+                  <div className="info-product-icon">
+                    <StockSvg />
+                  </div>
 
                   <div className="info-products-text">
                     <p className="info-product-item-text gray">In Stock</p>
@@ -174,9 +203,10 @@ export default function App() {
                   </div>
                 </div>
                 <div className="info-product-item">
-                  <div className="info-product-icon"></div>
+                  <div className="info-product-icon">
+                    <GuarantSvg />
+                  </div>
                   <div className="info-products-text">
-                    {" "}
                     <p className="info-product-item-text gray">Guaranteed</p>
                     <p className="info-product-item-text">1 year</p>
                   </div>
@@ -265,7 +295,10 @@ export default function App() {
               </div>
             </div>
             <div className="details__product-buttons">
-              <button className="details__product-more">View More</button>
+              <button className="details__product-more">
+                View More 
+                <ViewMoreSvg className="viewmoresvg" />
+              </button>
             </div>
           </div>
         </div>
