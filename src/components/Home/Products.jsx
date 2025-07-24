@@ -1,6 +1,4 @@
 import React from 'react';
-import ProductsHeartIcon from "../../assets/svg/Home/ProductsHeartIcon";
-import ProductsCardIphone from '../../../public/image/products-card-acces.png';
 import { ProductsItem } from '../../data/data';
 
 function Products() {
