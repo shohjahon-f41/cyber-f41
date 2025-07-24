@@ -4,22 +4,24 @@
 @import "./global/_normalize.scss";
 
 
+// products
+@import "../scss/components/_header.scss";
+@import "../scss/components/HeaderBottom.scss";
+@import "../scss/components/_products.scss";
+@import "./components/Home/_banner.scss";
 
 // components
 
-@import "../scss/header/header.scss";
 @import "../scss/components/products/products";
 @import "../scss/components/products/HeaderBottom.scss";
 @import "./components/_homeproducts.scss";
-
-
 
 // cart
 @import "./components/Cart/_shoppingcard.scss";
 @import "./components/Cart/_cartstepone.scss";
 @import "./components/Cart/_cartsteptwo.scss";
 @import "./components/Cart/_cartstepthree.scss";
-  
+
 // product details
 @import "./components/ProductsDetails/prodetswiper";
 @import "./components/ProductsDetails/productdetails";
@@ -29,3 +31,10 @@
 
 @import "./components/Footer/_footer.scss";
 
+//  home
+
+@import "./components/Home/_header.scss";
+@import "./components/Home/_browsecat.scss";
+@import "./components/Home/_products.scss";
+@import "./components/Home/_popular.scss";
+@import "./components/Home/_sale.scss";

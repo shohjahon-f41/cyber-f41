@@ -26,11 +26,12 @@ import { BattarySvg } from "../components/ProductDetails/BattarySvg.jsx";
 import { StockSvg } from "../components/ProductDetails/StockSvg.jsx";
 import { GuarantSvg } from "../components/ProductDetails/GuarantSvg.jsx";
 import { ViewMoreSvg } from "../components/ProductDetails/ViewMoreSvg.jsx";
+// import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [selectedColor, setSelectedColor] = useState("black");
-  const colors = ["#000", "#781dbc", "#e10000", "#e1b000", "#e8e8e8"];
+  const colors = ["#000000", "#781dbc", "#e10000", "#e1b000", "#e8e8e8"];
 
   return (
     <>
@@ -105,7 +106,7 @@ export default function App() {
             <div className="products-info__right">
               <h1 className="right__title">Apple iPhone 14 Pro Max</h1>
               <div className="right__price">
-                <p className="right-price__text">1399$</p>{" "}
+                <p className="right-price__text">1399$</p>
                 <span className="discount">$1499</span>
               </div>
               <div className="right__select-color">
@@ -121,7 +122,7 @@ export default function App() {
                       borderRadius: "50%",
                       border: "none",
                       transform:
-                        selectedColor === color ? "scale(1.1)" : "scale(1)",
+                        selectedColor === color ? "scale(1.1)" : "scale(1) ",
                       transition: "all 0.2s ease",
                       cursor: "pointer",
                     }}
@@ -296,7 +297,7 @@ export default function App() {
             </div>
             <div className="details__product-buttons">
               <button className="details__product-more">
-                View More 
+                View More
                 <ViewMoreSvg className="viewmoresvg" />
               </button>
             </div>
@@ -316,22 +317,38 @@ export default function App() {
                 <div className="reviews__level">
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
+
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
+                  <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
+                    <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
+                   <div className="reviews__progress">
+                      <div className="reviews__progress-fill"></div>
+                    </div>
                     <p className="reviews-level-number">100</p>
                   </div>
                 </div>
@@ -339,6 +356,7 @@ export default function App() {
             </div>
             <input
               placeholder="Leave Comment"
+              id="leavecomment"
               type="text"
               className="reviews__comment"
             />

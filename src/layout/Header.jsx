@@ -1,41 +1,80 @@
-import React from 'react'
-import LogoIcon from '../assets/scss/svg/LogoIcon'
-import Search from '../assets/scss/svg/SearchIcon'
-import Heart from '../assets/scss/svg/Heart'
-import Shop from '../assets/scss/svg/Shop'
-import Contact from '../assets/scss/svg/Contact'
-import "../assets/scss/main.scss"
-
-
-
+import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+import {CloseIcon, HeartIcon, KorzinaIcon, LogoIcon, MenuIcon} from "../assets/icons";
 
 function Header() {
+  let MenuBtnRef = useRef(document.querySelector(".header-menu"));
+
+  function MenuBtn() {
+    MenuBtnRef.current.classList.add("active");
+    document.querySelector("#root").classList.add("active")
+  }
+
+  function CloseBtn() {
+    MenuBtnRef.current.classList.remove("active")
+    document.querySelector("#root").classList.remove("active")
+
+  }
+
   return (
-    <>
-      <header className='header'>
-        <div className="container">
-          <div className="header__wrap">
-            <a href="#" className="header__wrap__logo"><LogoIcon /></a>
-            <div className="header__input">
-              <label htmlFor="search" className='header__input__label'><Search /></label>
-              <input type="text" id='search' placeholder='Search' className='header__input-item' />
+    <header className="header">
+      <div className="container">
+        <div className="header-wrap">
+          <div className="header-logo">
+            <Link to="/">
+              <LogoIcon />
+            </Link>
+          </div>
+          <div className="header-search">
+            <input type="text" placeholder="Search" />
+          </div>
+          <nav className="header-nav">
+            <Link to="/" className="header-nav-title">Home</Link>
+            <Link to="#" className="header-nav-title">About</Link>
+            <Link to="#" className="header-nav-title">Contact Us</Link>
+            <Link to="#" className="header-nav-title">Blog</Link>
+          </nav>
+          <div className="header-right">
+            <Link>
+              <HeartIcon />
+            </Link>
+            <Link to="/cart">
+              <KorzinaIcon />
+            </Link>
+          </div>
+          <div className="header-menu-icon">
+            <button onClick={MenuBtn} className="MenuBtn">
+              <MenuIcon />
+            </button>
+          </div>
+
+          <div className="header-menu" ref={MenuBtnRef}>
+            <div className="header-close-btn">
+              <button onClick={CloseBtn}>
+                <CloseIcon />
+              </button>
             </div>
-            <nav className="header__navbar">
-              <a href="#" className="header__navbar-item">Home</a>
-              <a href="#" className="header__navbar-item">About</a>
-              <a href="#" className="header__navbar-item">Contact Us </a>
-              <a href="#" className="header__navbar-item">Blog</a>
+            <nav className="header-nav-menu">
+              <Link to="#" className="">Home</Link>
+              <Link to="#" className="">About</Link>
+              <Link to="#" className="">Contact Us</Link>
+              <Link to="#" className="">Blog</Link>
             </nav>
-            <div className="header__buttons">
-              <a href="#" className="header__buttons__item"><Heart /></a>
-              <a href="#" className="header__buttons__item"><Shop /></a>
-              <a href="#" className="header__buttons__item"><Contact /></a>
+            <div className="header-nav-menu-liked">
+              <Link className="header-nav-menu-liked-title">
+                <HeartIcon />
+                Favourites
+              </Link>
+              <Link to="/cart" className="header-nav-menu-liked-title">
+                <KorzinaIcon />
+                Korzina
+              </Link>
             </div>
           </div>
         </div>
-      </header>
-    </>
-  )
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
