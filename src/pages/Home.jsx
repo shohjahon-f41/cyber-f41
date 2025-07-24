@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowseCat, Popular, Products, Sale } from '../components';
+import { BrowseCat, Popular, Products, Sale } from '../components/Home';
 
 
 function Home() {
