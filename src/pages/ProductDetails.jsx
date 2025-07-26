@@ -5,28 +5,19 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import InfoProductDel from "../components/ProductDetails/InfoProductDel.jsx";
-import {
-  ProDetIphone,
-  ProDetIphone2,
-  ProDetIphone3,
-  ProDetIphone4,
-  ProDetIphone5,
-  ProDetIphoneBig2,
-  ProDetIphoneBig3,
-  ProDetIphoneBig4,
-  RelatedIphone14,
-} from "../components/ProductDetails/index.js";
-import ScreenSizeSvg from "../components/ProductDetails/ScreenSizeSvg.jsx";
-import CpuSvg from "../components/ProductDetails/CpuSvg.jsx";
-import CoreSvg from "../components/ProductDetails/CoreSvg.jsx";
-import MainCameraSvg from "../components/ProductDetails/MainCamera.jsx";
-import FrontCameraSvg from "../components/ProductDetails/FrontCameraSvg.jsx";
-import { BattarySvg } from "../components/ProductDetails/BattarySvg.jsx";
-import { StockSvg } from "../components/ProductDetails/StockSvg.jsx";
-import { GuarantSvg } from "../components/ProductDetails/GuarantSvg.jsx";
-import { ViewMoreSvg } from "../components/ProductDetails/ViewMoreSvg.jsx";
+import InfoProductDel from "../assets/icons/InfoProductDel.jsx";
+import { ProductsSmallImg } from "../data/data.jsx";
+import ScreenSizeSvg from "../assets/icons/ScreenSizeSvg.jsx";
+import CpuSvg from "../assets/icons/CpuSvg.jsx";
+import CoreSvg from "../assets/icons/CoreSvg.jsx";
+import MainCameraSvg from "../assets/icons/MainCamera.jsx";
+import FrontCameraSvg from "../assets/icons/FrontCameraSvg.jsx";
+import { BattarySvg } from "../assets/icons/BattarySvg.jsx";
+import { StockSvg } from "../assets/icons/StockSvg.jsx";
+import { GuarantSvg } from "../assets/icons/GuarantSvg.jsx";
+import { ViewMoreSvg } from "../assets/icons/ViewMoreSvg.jsx";
 // import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
+import RelatedIphone14 from "/images/related-iphone14.png"
 
 export default function App() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -51,27 +42,13 @@ export default function App() {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper"
               >
-                <SwiperSlide>
-                  <div className="products-info__small-img img1">
-                    <img src={ProDetIphone} alt="thumb-1" />
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="products-info__small-img">
-                    <img src={ProDetIphoneBig2} alt="thumb-3" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="products-info__small-img">
-                    <img src={ProDetIphoneBig3} alt="thumb-4" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="products-info__small-img">
-                    <img src={ProDetIphoneBig4} alt="thumb-5" />
-                  </div>
-                </SwiperSlide>
+                {ProductsSmallImg.map((item) => (
+                  <SwiperSlide>
+                    <div className="products-info__small-img img1">
+                      <img src={item.img} alt={`alt${item.id}`} />
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
 
               {/* Основное изображение */}
@@ -88,19 +65,11 @@ export default function App() {
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper2"
               >
-                <SwiperSlide>
-                  <img src={ProDetIphone} alt="nature-1" />
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <img src={ProDetIphoneBig2} alt="nature-3" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={ProDetIphoneBig3} alt="nature-4" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={ProDetIphoneBig4} alt="nature-5" />
-                </SwiperSlide>
+                {ProductsSmallImg.map((item) => (
+                  <SwiperSlide>
+                    <img src={item.img} alt={`alt${item.id}`} />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
             <div className="products-info__right">
@@ -332,7 +301,7 @@ export default function App() {
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                  <div className="reviews__progress">
+                    <div className="reviews__progress">
                       <div className="reviews__progress-fill"></div>
                     </div>
                     <p className="reviews-level-number">100</p>
@@ -346,7 +315,7 @@ export default function App() {
                   </div>
                   <div className="reviews__level-item">
                     <p className="reviews-level-text">Excellent</p>
-                   <div className="reviews__progress">
+                    <div className="reviews__progress">
                       <div className="reviews__progress-fill"></div>
                     </div>
                     <p className="reviews-level-number">100</p>
