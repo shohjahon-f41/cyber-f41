@@ -24,7 +24,7 @@ function ShoppingCardProducts() {
                 <div className="shopping-card-item-right">
                   <div className="shopping-card-quantity-selector">
                     <button>-</button>
-                    <p>1</p>
+                    <p>{item.qty}</p>
                     <button >+</button>
                   </div>
                   <h1>{item.productPrice}</h1>
