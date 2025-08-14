@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Products } from '../../data/data.jsx'
 import CloseIcon from "../../assets/icons/CloseIcon.jsx"
+import { CartContext } from '../../contexts/CartContext.jsx'
 
 function ShoppingCardProducts() {
+  const {cart} = useContext(CartContext)
   return (
     <div className="shopping-card-left">
       <h1>Shopping Cart</h1>
       <div className="shopping-card-items">
         {
-          Products.map(item => (
+          cart.map(item => (
             <div className="shopping-card-item" key={item.id}>
               <img src={item.img} alt={item.productCode} />
               <div className="shopping-card-item-datas">
