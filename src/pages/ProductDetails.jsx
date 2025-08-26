@@ -66,6 +66,12 @@ export default function App() {
 	}
 
 	useEffect(() => {
+		if (product?.name) {
+			document.title = `${product.name} | MyShop`;
+		}
+	}, [product]);
+
+	useEffect(() => {
 		getProduct();
 	}, []);
 
