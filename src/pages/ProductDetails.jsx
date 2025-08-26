@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -18,7 +18,8 @@ import {GuarantSvg} from '../assets/icons/GuarantSvg.jsx';
 import {ViewMoreSvg} from '../assets/icons/ViewMoreSvg.jsx';
 // import { StarsSvg } from "../components/ProductDetails/StarsSvg.jsx";
 import RelatedIphone14 from '/images/related-iphone14.png';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
+import {CartContext} from '../contexts/CartContext.jsx';
 
 const icons = {
 	'Screen size': <ScreenSizeSvg />,
@@ -30,19 +31,37 @@ const icons = {
 };
 
 export default function App() {
+	const {addCart} = useContext(CartContext);
+
 	const [product, setProduct] = useState({});
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 	const [selectedColor, setSelectedColor] = useState('black');
 	const colors = ['#000000', '#781dbc', '#e10000', '#e1b000', '#e8e8e8'];
 	const location = useLocation();
 	const path = location.pathname.split('/')[2];
+	const navigate = useNavigate();
+
+	// function getProduct() {
+	// 	fetch(`https://302d37aacffa4da5.mokky.dev/products/${path}`)
+	// 		.then((res) => res.json())
+	// 		.then((json) => {
+	// 			console.log(json);
+	// 			setProduct(json);
+	// 		});
+	// }
 
 	function getProduct() {
 		fetch(`https://302d37aacffa4da5.mokky.dev/products/${path}`)
-			.then((res) => res.json())
-			.then((json) => {
-				console.log(json);
-				setProduct(json);
+			.then(async (res) => {
+				if (!res.ok) {
+					navigate('/404', {replace: true});
+					return;
+				}
+				const data = await res.json();
+				setProduct(data);
+			})
+			.catch(() => {
+				navigate('/404', {replace: true});
 			});
 	}
 
@@ -71,7 +90,7 @@ export default function App() {
 								{ProductsSmallImg.map((item) => (
 									<SwiperSlide>
 										<div className="products-info__small-img img1">
-											<img src={product.image} alt={`alt${product.id}`} />
+											<img src={product.img} alt={`alt${product.id}`} />
 										</div>
 									</SwiperSlide>
 								))}
@@ -93,7 +112,7 @@ export default function App() {
 							>
 								{ProductsSmallImg.map((item) => (
 									<SwiperSlide>
-										<img src={product.image} alt={`alt${product.id}`} />
+										<img src={product.img} alt={`alt${product.id}`} />
 									</SwiperSlide>
 								))}
 							</Swiper>
@@ -171,7 +190,7 @@ export default function App() {
 							<div className="right-spec">
 								{Object.entries(product.specs || {}).map(([key, value]) => (
 									<div className="spec-item" key={key}>
-										<div className="spec-item__icon">{icons[key]}</div>
+										{/* <div className="spec-item__icon">{icons[key]}</div> */}
 										<div className="spec-item-wrap">
 											<p className="spec-item__subtitle">{key}</p>
 											<p className="spec-item-subtitle title">{value}</p>
@@ -183,7 +202,9 @@ export default function App() {
 							<p className="right__desc">{product.desc}</p>
 							<div className="right-buttons">
 								<button className="right-button">Add to Wishlist</button>
-								<button className="right-button card">Add to Card</button>
+								<button onClick={() => addCart(product)} className="right-button card">
+									Add to Card
+								</button>
 							</div>
 							<div className="right-info-product">
 								<div className="info-product-item">

@@ -46,7 +46,6 @@ function ShoppingCardProducts() {
 								<button onClick={() => deleteItem(item)}>
 									<CloseIcon />
 								</button>
-								{/* 54:54 */}
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
-import {Cart, CartStepOne, CartStepTwo, Favourite, Home, Products, ProductDetails} from '../pages';
+import {Cart, CartStepOne, CartStepTwo, Favourite, Home, Products, ProductDetails, NotFound} from '../pages';
 import CartStepThree from '../pages/CartStepThree';
 
 export const routes = [
@@ -36,6 +36,6 @@ export const routes = [
 	},
 	{
 		path: '*',
-		element: <Home />,
+		element: <NotFound />,
 	},
 ];

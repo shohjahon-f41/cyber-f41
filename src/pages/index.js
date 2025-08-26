@@ -6,5 +6,6 @@ import Favourite from "./Favourite";
 import ProductDetails from "./ProductDetails";
 import CartStepOne from "./CartStepOne";
 import CartStepTwo from "./CartStepTwo";
+import NotFound from "./NotFound";
 
-export { Home, Products, ProductsItem, Cart, Favourite, CartStepOne, CartStepTwo, ProductDetails }
+export { Home, Products, ProductsItem, Cart, Favourite, CartStepOne, CartStepTwo, ProductDetails, NotFound }

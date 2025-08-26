@@ -21,6 +21,7 @@ function CartProvider({children}) {
 			// setCart(cart.map((item) => (item.id === data.id ? {...item, qty: (item.qty += 1)} : {...item})));
 			// localStorage.setItem('cart', JSON.stringify());
 			setItem(cart.map((item) => (item.id === data.id ? {...item, qty: (item.qty += 1)} : {...item})));
+			console.log(cart)
 		} else {
 			let obj = {...data, qty: 1};
 			// setCart([...cart, obj]);
