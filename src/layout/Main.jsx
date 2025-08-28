@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { routes } from '../data/routes'
+import { NotFound } from '../pages'
 
 function Main() {
   return (

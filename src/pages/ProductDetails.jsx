@@ -20,6 +20,7 @@ import {ViewMoreSvg} from '../assets/icons/ViewMoreSvg.jsx';
 import RelatedIphone14 from '/images/related-iphone14.png';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {CartContext} from '../contexts/CartContext.jsx';
+import { LanguageContext } from '../contexts/LanguageContext.jsx';
 
 const icons = {
 	'Screen size': <ScreenSizeSvg />,
@@ -32,6 +33,7 @@ const icons = {
 
 export default function App() {
 	const {addCart} = useContext(CartContext);
+	const {language} = useContext(LanguageContext);
 
 	const [product, setProduct] = useState({});
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -124,7 +126,7 @@ export default function App() {
 							</Swiper>
 						</div>
 						<div className="products-info__right">
-							<h1 className="right__title">{product.name}</h1>
+							<h1 className="right__title">{language === 'uz' ? product.name_uz : product.name}</h1>
 
 							<div className="right__price">
 								<p className="right-price__text">{product.price}$</p>
@@ -205,7 +207,7 @@ export default function App() {
 								))}
 							</div>
 
-							<p className="right__desc">{product.desc}</p>
+							<p className="right__desc">{language === 'uz' ? product.desc_uz : product.desc}</p>
 							<div className="right-buttons">
 								<button className="right-button">Add to Wishlist</button>
 								<button onClick={() => addCart(product)} className="right-button card">
